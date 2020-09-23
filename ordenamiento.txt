@@ -1,9 +1,0 @@
-*********COLEGIO MEJIA**********
-****Reporte de calificaciones****
-
-Calificaciones Ordenadas
-
-Notas finales Ordenadas  por HeapSort
-  |  13  |    |  17  |  
-Notas finales Ordenadas  por Quicksort
-  |  13  |    |  17  |  

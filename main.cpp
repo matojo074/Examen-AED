@@ -55,7 +55,7 @@ int main (){
             break;
           }
           default:{
-            cout << "Opcion no valida! Ingrese la opcion correcta.\n";
+            cout << "\nOpcion no valida! Ingrese la opcion correcta.\n";
           }
         }
         opcion2 = menuOrdenamiento();
@@ -98,14 +98,17 @@ int main (){
 
           }
           default:{
-            cout << "Opcion no valida. Ingrese la opcion correcta.\n";
+            cout << "\nOpcion no valida. Ingrese la opcion correcta.\n";
           }
         }
         opcion3 = menuBusqueda();
       }
     }
+    case 4:{
+    datos(lista,estudiante);
+    }
     default:{
-      cout << "Opcion no valida. Ingrese la opcion correcta.\n";
+      cout << "\nOpcion no valida. Ingrese la opcion correcta.\n";
     }
     }
     opcion=menu();
@@ -115,12 +118,13 @@ int main (){
 int menu()
 {
   int op = -1;
+  cout<<"\n";
   cout <<" "<< setfill( '=' )<< setw( 60 )  <<'\n'; 
-  cout <<setfill( ' ' )<<"|"<<setw(45)<<"|BIENVENIDO AL SISTEMA DE NOTAS|"<<setw(15)<<"|"<<endl;
-  cout<<"|"<<setw(61)<<"*INTEGRANTES:| "<<'\n'<<"|"<<setw(61)<<"Josue Vergara|\n"<<"|"<<setw(61)<<"Mateo Cevallos|\n"<<"|"<<setw(61)<<"Noemi Cumbal|\n"<<"|"<<setw(61)<<"Ivan Fraga|\n"<<"|"<<setw(61)<<"Guillermo Andrade|\n";
+  cout <<setfill( ' ' )<<"|"<<setw(45)<<"\n|BIENVENIDO AL SISTEMA DE NOTAS|"<<setw(15)<<"|"<<endl;
+  cout<<"|"<<setw(61)<<"*INTEGRANTES:| "<<'\n'<<"|"<<setw(61)<<"Josue Singaña|\n"<<"|"<<setw(61)<<"Mateo Cevallos|\n"<<"|"<<setw(61)<<"Noemi Cumbal|\n"<<"|"<<setw(61)<<"Ivan Fraga|\n"<<"|"<<setw(61)<<"Guillermo Andrade|\n";
 
   cout <<" "<< setfill( '=' )<< setw( 60 )  <<'\n'<< setfill( ' ' );
-  cout <<setw(30)<< "*MENU PRINCIPAL*\n";
+  cout <<setw(30)<< "\n*MENU PRINCIPAL*\n";
   cout<<" "<<setfill('-')<<setw(41)<<'\n'<<setfill(' ');
   cout <<"|"<<"1."<<setw(40)<<right<<"Ingresar los datos al sistema.|\n";
   cout <<"|"<<"2."<<setw(40)<<"Ordenar notas.|\n";

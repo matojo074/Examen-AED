@@ -24,12 +24,29 @@ typedef struct{
 }tLista;
 
 
+
+
+
+
+
+
+
+
+
+
+void datos(tLista &lista, tEstudiante estudiante);
 void ingresar (tLista &lista, tEstudiante estudiante);
 void ordenamiento_quik();
 void ordenamiento_Heapsort();
 void ordenamiento_Burbuja();
 void ordenamiento_mergesort();
+void ordenar_burbuja(double notas [],int arreglo);
+void heapSort(double b[], int n);
+void ordenar(double arr[], int pinicial, int pfinal);
 
+double mitad (double arr[], int pinicial,  int pfinal);
+void Fucionar(double Elementos[],int pinicial,int pfinal, int medio);
+void orden_mergesort(double Elementos[],int inicial,int final);
 //Busquedas
 int Busqueda_Lineal(tLista lista, int nota);
 

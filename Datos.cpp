@@ -1,32 +1,24 @@
+
 #include <iostream>
 #include <fstream>
 #include <string.h>
 #include<iomanip>
 #include"Datos.h"
 using namespace std;
-double notass[100];
- int contador1=0;
+double notass[100];//arreglo para luego ordenar 
+ int contador1=0;//creamos el contador
  int contador2=0;
  int contBase=0;
  int Cnotas;
-
-
-
-void orden_mergesort(double Elementos[],int inicial,int final);
-void Fucionar(double Elementos[],int pinicial,int pfinal, int medio);
-void ordenamiento_mergesort();
-
-
-
-double mitad (double arr[], int pinicial,  int pfinal);
-void ordenar(double arr[], int pinicial, int pfinal);
 int Cestudiantes;
 
-void heapSort(double b[], int n);
-void ordenamiento_Heapsort();
-void ordenar_burbuja(double notas [],int arreglo);
-void ordenamiento_Burbuja();
 
+
+
+
+
+
+//aquie trabajamos la estructura
 
 void ingresar (tLista &lista, tEstudiante estudiante){
   string profe, materia;
@@ -106,6 +98,7 @@ void ingresar (tLista &lista, tEstudiante estudiante){
     if (lista.a[i].total <9 && lista.a[i].total >= 0){
       reprovados++;
     }
+    //creamos el arreglo 
     notass[contador1]= lista.a[i].total = suma / Cnotas;
     contador1++;
     
@@ -133,8 +126,39 @@ void ingresar (tLista &lista, tEstudiante estudiante){
   
 
 }
+///modificado
+//opcion 4 donde presenta  los datos del estudiante
+void datos(tLista &lista, tEstudiante estudiante){
+  int  validNota, aprovados = 0, reprovados = 0, suspensos = 0;
+  double suma =0;
+  cout<<"\n********************************************\n";
+  cout <<"\nLISTA DE ESTUDIANTES\n";
+  for (int i = 0; i < Cestudiantes; i++){
 
+    cout << "|"<< i+1 << "|"<<left << lista.a[i].nombre << "|"<< lista.a[i].apellido;
+    
+    if (lista.a[i].total >=14){
+      cout<<setw(15)<<" " <<"A : "<<lista.a[i].total;
+     cout<<endl;
+    }
+    if (lista.a[i].total <14 && lista.a[i].total >= 9){
+      cout<<setw(10) <<" "<<"S:"<<lista.a[i].total;
+      cout<<endl;
+    }
+    if (lista.a[i].total <9 && lista.a[i].total >= 0){
+      cout<<setw(10)<<" " <<"R"<<lista.a[i].total;
+      cout<<endl;
+    }
+    cout <<"\n";
+    
+   
+    
+   
+}
+cout<<"\n********************************************\n";
+}
 
+//tipos de ordenamientos 
 void ordenamiento_quik()
 {  ofstream ordenamiento;
 ordenamiento.open("ordenamiento.txt",ios::app);
@@ -196,7 +220,7 @@ ordenamiento.open("ordenamiento.txt",ios::app);
 }
 
 
-
+//ordenamiento de Quicksort
 double mitad (double arr[], int pinicial,  int pfinal)
 {
 
